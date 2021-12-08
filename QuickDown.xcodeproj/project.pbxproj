@@ -18,6 +18,7 @@
 		56D420322760BC8C00ED9609 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 56D420312760BC8C00ED9609 /* HotKey */; };
 		56D420362760BCD600ED9609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D420352760BCD600ED9609 /* Assets.xcassets */; };
 		56D420382760BCDF00ED9609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D420372760BCDF00ED9609 /* Main.storyboard */; };
+		56FBD9372760F842003DC5A7 /* InfoModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBD9362760F842003DC5A7 /* InfoModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		56D4202B2760BC5700ED9609 /* MarkdownFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownFile.swift; sourceTree = "<group>"; };
 		56D420352760BCD600ED9609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D420372760BCDF00ED9609 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		56FBD9362760F842003DC5A7 /* InfoModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				56D420252760BC4800ED9609 /* ContentView.swift */,
+				56FBD9362760F842003DC5A7 /* InfoModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				56D420202760BBB600ED9609 /* AppDelegate.swift in Sources */,
 				56D4202C2760BC5700ED9609 /* StatusBarController.swift in Sources */,
 				56D420262760BC4800ED9609 /* ContentView.swift in Sources */,
+				56FBD9372760F842003DC5A7 /* InfoModalView.swift in Sources */,
 				56D4202F2760BC5700ED9609 /* MarkdownFile.swift in Sources */,
 				56D4202D2760BC5700ED9609 /* MarkdownExportManager.swift in Sources */,
 				56D420232760BC4000ED9609 /* MenuBarViewController.swift in Sources */,

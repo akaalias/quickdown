@@ -11,28 +11,37 @@ struct ContentView: View {
     @State var showingExporter = false
     @State var errorMessage = ""
     @FocusState private var focusedField: FocusField?
+    @State private var showModal = false
+    
     
     var body: some View {
-        VStack {
+        ZStack {
             TextEditor(text: $noteText)
                 .foregroundColor(.primary)
                 .font(.system(.title, design: .monospaced))
                 .task { self.focusedField = .field }
-            HStack {
-                Button("Save (⌘-S)") {
-                    showingExporter = true
-                }
-                .keyboardShortcut("s", modifiers: [.command])
-                .hidden()
-
-                Button("Close (⌘-E)") {
+                .onExitCommand(perform: {
                     popover.performClose(self)
-                }
-                .keyboardShortcut("e", modifiers: [.command])
-                .hidden()
+                })
+            
+            Button {
+                self.showModal.toggle()
+            } label: {
+                Image(systemName: "gear")
+            }
+            .sheet(isPresented: $showModal) {
+                InfoModalView(showModal: self.$showModal)
+            }
+            .offset(x: 210, y: 110)
+            .buttonStyle(.borderless)
 
+            Button("Save") {
+                showingExporter = true
             }
             .frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .keyboardShortcut("s", modifiers: [.command])
+            .hidden()
+            
         }
         .padding(20)
         .fileExporter(isPresented: $showingExporter,
