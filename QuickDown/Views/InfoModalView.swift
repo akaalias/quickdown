@@ -1,6 +1,6 @@
 import SwiftUI
 import AppKit
-
+import LaunchAtLogin
 
 struct InfoModalView: View {
     @Binding var showModal: Bool
@@ -9,12 +9,17 @@ struct InfoModalView: View {
         List {
             Text("Settings")
                 .font(.title2)
+
+            Divider()
+
+            LaunchAtLogin.Toggle()
+
+            Divider()
             
             HStack {
                 Text("Global Hotkey")
                 Text("⌘-⌥-N")
                     .bold()
-
             }
 
             HStack {
@@ -36,10 +41,9 @@ struct InfoModalView: View {
             }
 
         }
-        .frame(width: 300, height: 170)
+        .frame(width: 300, height: 250)
         .onExitCommand(perform: {
             self.showModal.toggle()
         })
-
     }
 }
