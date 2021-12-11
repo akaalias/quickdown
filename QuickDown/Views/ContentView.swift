@@ -12,8 +12,9 @@ struct ContentView: View {
     @State var errorMessage = ""
     @FocusState private var focusedField: FocusField?
     @State private var showModal = false
-    
-    
+
+    @State var showingImporter = false
+
     var body: some View {
         ZStack {
             TextEditor(text: $noteText)
@@ -41,8 +42,29 @@ struct ContentView: View {
             .frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .keyboardShortcut("s", modifiers: [.command])
             .hidden()
-            
+
+            Button("Open") {
+                showingImporter = true
+            }
+            .frame(width: 0, height: 0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .keyboardShortcut("o", modifiers: [.command])
+            .hidden()
         }
+        .fileImporter(isPresented: $showingImporter, allowedContentTypes: [.markdownText], onCompletion: { result in
+            switch result {
+            case .success(let url):
+                print("Success: \(url) markdown files opened\n")
+                guard url.startAccessingSecurityScopedResource() else { return }
+                if let textData = try? String(contentsOf: url) {
+                    noteText = textData
+                }
+                url.stopAccessingSecurityScopedResource()
+
+            case .failure(let error):
+                print("Error: \(error.localizedDescription)\n")
+            }
+
+        })
         .padding(20)
         .fileExporter(isPresented: $showingExporter,
                       document: MarkdownExportManager().createFileFromString(text: noteText),
