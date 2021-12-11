@@ -53,7 +53,6 @@ struct ContentView: View {
         .fileImporter(isPresented: $showingImporter, allowedContentTypes: [.markdownText], onCompletion: { result in
             switch result {
             case .success(let url):
-                print("Success: \(url) markdown files opened\n")
                 guard url.startAccessingSecurityScopedResource() else { return }
                 if let textData = try? String(contentsOf: url) {
                     noteText = textData
