@@ -29,6 +29,12 @@ struct InfoModalView: View {
             }
 
             HStack {
+                Text("Open Note")
+                Text("⌘-O")
+                    .bold()
+            }
+
+            HStack {
                 Text("Dismiss Popover")
                 Text("Esc")
                     .bold()

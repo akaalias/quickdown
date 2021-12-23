@@ -7,7 +7,7 @@ struct ContentView: View {
     }
     
     @State var popover: NSPopover
-    @State private var noteText: String = "## "
+    @State private var noteText: String = ""
     @State var showingExporter = false
     @State var errorMessage = ""
     @FocusState private var focusedField: FocusField?
