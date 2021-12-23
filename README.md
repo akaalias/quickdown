@@ -1,6 +1,8 @@
 ## QuickDown
 
 Simple, keyboard-first, markdown note-taking for MacOS
+
+![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
 ### Main Features
 - Global Hotkey: ⌘-⌥-N
@@ -30,4 +32,5 @@ Just a way to jot down a markdown note.
 
 Nothing more, nothing less. 
 
-
+## Installation on Mac (Arm64)
+- 
