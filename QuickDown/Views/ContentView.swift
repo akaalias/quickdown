@@ -72,7 +72,7 @@ struct ContentView: View {
             switch result {
             case .success(let url):
                 print("Success: \(url) markdown files exported\n")
-                noteText = "## "
+                noteText = ""
                 popover.performClose(self)
                 
             case .failure(let error):
