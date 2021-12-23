@@ -2,12 +2,14 @@
 
 Simple, keyboard-first, markdown note-taking for MacOS
  
-### Features
+### Main Features
 - Global Hotkey: ⌘-⌥-N
-- Dismiss: Esc
 - Save Note: ⌘-S
-- Open Note: ⌘-O
 - Start-on-login (Optional)
+
+### Additional Features
+- Dismiss: Esc
+- Open Note: ⌘-O
 
 ### Background
 
