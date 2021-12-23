@@ -23,7 +23,7 @@ If you like having QuickDown around after logins, click on the gear bottom-right
 
 ### Background
 
-As an [avid Obsidian user](https://publish.obsidian.md/alexisrondeau), I often want to take a quick note while working 
+As an [avid Obsidian user](https://publish.obsidian.md/alexisrondeau) and [constant pen-paper note-taker](https://publish.obsidian.md/alexisrondeau/%E2%AD%90%EF%B8%8F+My+Physical+Notebooks+(Photos)), I often want to take a quick markdown note while working 
 - _without_ having to keep Obsidian running in the background
 - _without_ having to switch to Obsidian to write
 - _without_ having to leave my keyboard
