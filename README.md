@@ -39,6 +39,3 @@ None of the existing [note-taking menu bar apps](https://www.macmenubar.com/note
 Just a way to jot down a markdown note.
 
 Nothing more, nothing less. 
-
-## Installation on Mac (Arm64)
-- 
