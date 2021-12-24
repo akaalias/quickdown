@@ -1,4 +1,4 @@
-## QuickDown: Keyboard-first, local markdown note-taking
+## QuickDown: Keyboard-first, local markdown note-taking for MacOS
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
