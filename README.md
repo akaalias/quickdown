@@ -1,5 +1,3 @@
-[![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg?logoColor=brightgreen)]()
-
 ## QuickDown: Keyboard-first, local markdown note-taking
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
@@ -38,3 +36,5 @@ None of the existing [note-taking menu bar apps](https://www.macmenubar.com/note
 Just a way to jot down a markdown note.
 
 Nothing more, nothing less. 
+
+[![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg?logoColor=brightgreen)]()
