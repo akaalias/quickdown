@@ -1,17 +1,16 @@
 ## QuickDown
 
-Simple, keyboard-first, markdown note-taking for MacOS
+Keyboard-first, local markdown note-taking for MacOS
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
-### Main Features
+### Features
 - Global Hotkey: ⌘-⌥-N
-- Save Note: ⌘-S
-- Launch on Login (Optional)
+- Save Markdown Note: ⌘-S
 
-#### Additional Features
+### Utilities
 - Dismiss Popover: Esc
-- Open Note: ⌘-O
+- Open Markdown Note: ⌘-O
 
 ## Install QuickDown (Apple Silicon)
 - Download latest release (QuickDown.zip) from [releases](https://github.com/akaalias/quickdown/releases)
