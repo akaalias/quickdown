@@ -1,8 +1,6 @@
 [![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg)]()
 
-## QuickDown
-
-Keyboard-first, local markdown note-taking for MacOS
+## QuickDown: Keyboard-first, local markdown note-taking
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
@@ -14,7 +12,7 @@ Keyboard-first, local markdown note-taking for MacOS
 - Dismiss Popover: Esc
 - Open Markdown Note: ⌘-O
 
-## Install QuickDown (Apple Silicon)
+## Install QuickDown (MacOS/Arm64)
 - Download latest release (QuickDown.zip) from [releases](https://github.com/akaalias/quickdown/releases)
 - Unzip and drag QuickDown.app to your /Applications folder
 - Open QuickDown.app 
