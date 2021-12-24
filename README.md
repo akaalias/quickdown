@@ -1,3 +1,5 @@
+[![Total Downloads](https://img.shields.io/github/downloads/akaalias/akaalias/total.svg)]()
+
 ## QuickDown
 
 Keyboard-first, local markdown note-taking for MacOS
