@@ -1,4 +1,4 @@
-[![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg)]()
+[![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg?logoColor=brightgreen)]()
 
 ## QuickDown: Keyboard-first, local markdown note-taking
 
