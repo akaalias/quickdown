@@ -6,6 +6,7 @@ import HotKey
 class AppDelegate: NSObject, NSApplicationDelegate {
     var popover = NSPopover.init()
     var statusBar: StatusBarController?
+    var contentView: ContentView?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let contentView = ContentView(popover: popover)
@@ -23,6 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         print("applicationShouldTerminate")
+        let alert = NSAlert()
+        alert.messageText = "QuickDown"
+        alert.informativeText = "Accidental quitting by Command-Quit disabled"
+        alert.runModal()
+
         return .terminateCancel
     }
     
