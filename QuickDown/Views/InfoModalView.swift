@@ -27,9 +27,55 @@ struct InfoModalView: View {
 
                 LaunchAtLogin.Toggle()
             }
+                    
+            Divider()
+
+            Group {
+                
+                Text("Custom Overrides")
+                    .font(.title2)
+
+                HStack {
+                    Button(action: {
+                        self.disableCommandQuit.toggle()
+                        UserDefaults.standard.set(self.disableCommandQuit, forKey: "DisableCommandQuit")
+                    }, label: {
+                        Text("Avoid accidental ⌘-Q quitting")
+                    })
+                    
+                    if(disableCommandQuit) {
+                        Text("Disabled")
+                    } else {
+                        Text("Enabled")
+                    }
+                }
+            }
             
             Divider()
-                        
+            
+            Group {
+
+                Text("Markdown Template")
+                    .font(.title2)
+
+                TextEditor(text: $markdownTemplate)
+                    .foregroundColor(.primary)
+                    .frame(width: 250, height: 50)
+                
+                HStack {
+                    Button(action: {
+                        self.saveMarkdownTemplate()
+                    },
+                           label: {
+                        Text("Save Template")
+                    })
+                    
+                    Text(markdownTemplateSaveMessage)
+                }
+            }
+
+            Divider()
+            
             Group {
 
                 Text("Default Hotkeys")
@@ -59,56 +105,13 @@ struct InfoModalView: View {
                         .bold()
                 }
             }
-        
-            Divider()
-
-            Group {
-                
-                Text("Custom Overrides")
-                    .font(.title2)
-
-                HStack {
-                    Button(action: {
-                        self.disableCommandQuit.toggle()
-                        UserDefaults.standard.set(self.disableCommandQuit, forKey: "DisableCommandQuit")
-                    }, label: {
-                        Text("Avoid accidental ⌘-Q quitting")
-                    })
-                    
-                    if(disableCommandQuit) {
-                        Text("Disabled")
-                    } else {
-                        Text("Enabled")
-                    }
-                }
-            }
             
-            Divider()
-            
-            Group {
-                Text("Markdown Template")
-                    .font(.title2)
-
-                TextEditor(text: $markdownTemplate)
-                    .foregroundColor(.primary)
-                
-                HStack {
-                    Button(action: {
-                        self.saveMarkdownTemplate()
-                    },
-                           label: {
-                        Text("Save Template")
-                    })
-                    
-                    Text(markdownTemplateSaveMessage)
-                }
-            }
-                                    
             Button(action: {
                 self.showModal.toggle()
             }, label: {
                 Text("Close Settings")
             })
+                .buttonStyle(.bordered)
         })
         .padding(20)
         .onExitCommand(perform: {
