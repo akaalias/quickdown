@@ -7,7 +7,7 @@ struct ContentView: View {
     }
     
     @State var popover: NSPopover
-    @State private var noteText: String = ""
+    @State private var noteText: String = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
     @State var showingExporter = false
     @State var errorMessage = ""
     @FocusState private var focusedField: FocusField?
@@ -72,7 +72,7 @@ struct ContentView: View {
             switch result {
             case .success(let url):
                 print("Success: \(url) markdown files exported\n")
-                noteText = ""
+                noteText = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
                 popover.performClose(self)
                 
             case .failure(let error):

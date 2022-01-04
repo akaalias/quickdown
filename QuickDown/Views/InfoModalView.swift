@@ -5,21 +5,18 @@ import LaunchAtLogin
 struct InfoModalView: View {
     @Binding var showModal: Bool
     @State var disableCommandQuit: Bool = UserDefaults.standard.bool(forKey: "DisableCommandQuit")
+    @State var markdownTemplate: String = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
+    @State var markdownTemplateSaveMessage: String = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10, content: {
 
-            ZStack {
-                Text("Settings")
+            Group {
+                Text("QuickDown Settings")
                     .font(.title2)
-
-                Button(action: {
-                    self.showModal.toggle()
-                }, label: {
-                    Image(systemName: "xmark")
-                })
-                    .buttonStyle(.plain)
-                    .offset(x: 230, y: 0)
+                
+                Text("Version 1.4")
+                Text("Contact: alexis.rondeau@gmail.com")
             }
             
             Divider()
@@ -35,7 +32,7 @@ struct InfoModalView: View {
                         
             Group {
 
-                Text("Hotkeys")
+                Text("Default Hotkeys")
                     .font(.title2)
                 
                 HStack {
@@ -85,11 +82,42 @@ struct InfoModalView: View {
                     }
                 }
             }
+            
+            Divider()
+            
+            Group {
+                Text("Markdown Template")
+                    .font(.title2)
+
+                TextEditor(text: $markdownTemplate)
+                    .foregroundColor(.primary)
+                
+                HStack {
+                    Button(action: {
+                        self.saveMarkdownTemplate()
+                    },
+                           label: {
+                        Text("Save Template")
+                    })
+                    
+                    Text(markdownTemplateSaveMessage)
+                }
+            }
+                                    
+            Button(action: {
+                self.showModal.toggle()
+            }, label: {
+                Text("Close Settings")
+            })
         })
         .padding(20)
-        .frame(width: 300, height: 350)
         .onExitCommand(perform: {
             self.showModal.toggle()
         })
+    }
+    
+    func saveMarkdownTemplate() {
+        UserDefaults.standard.set(self.markdownTemplate, forKey: "MarkdownTemplate")
+        self.markdownTemplateSaveMessage = "Saved"
     }
 }
