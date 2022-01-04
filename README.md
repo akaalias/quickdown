@@ -18,17 +18,6 @@
 ### Optional: Launch on Login
 If you like having QuickDown around after logins, click on the gear bottom-right and check "Launch on Login"
 
-#### Add to Login Items
-**Important** – With the officially Apple-signed app from the .zip: 
-
-For some reason I also had to manually add the application to my Login Items for it to work. 
-
-- Open System Preferences
-- Users & Groups > <Your Account> 
-- Login Items > Add (+) > Select /Applications/QuickDown.app
-
-![Demo](https://github.com/akaalias/quickdown/blob/main/login-items.png?raw=true)
-
 ### Background
 
 As an [avid Obsidian user](https://publish.obsidian.md/alexisrondeau) and [constant pen-paper note-taker](https://publish.obsidian.md/alexisrondeau/%E2%AD%90%EF%B8%8F+My+Physical+Notebooks+(Photos)), I often want to take a quick markdown note while working 

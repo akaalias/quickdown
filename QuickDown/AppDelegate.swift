@@ -9,7 +9,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var contentView: ContentView?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let contentView = ContentView(popover: popover)
+        contentView = ContentView(popover: popover)
         popover.contentViewController = MenuBarViewController()
         popover.contentSize = NSSize(width: 500, height: 300)
         popover.contentViewController?.view = NSHostingView(rootView: contentView)
