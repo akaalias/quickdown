@@ -23,13 +23,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
-        print("applicationShouldTerminate")
-        let alert = NSAlert()
-        alert.messageText = "QuickDown"
-        alert.informativeText = "Accidental quitting by Command-Quit disabled"
-        alert.runModal()
-
-        return .terminateCancel
+        if(!UserDefaults.standard.bool(forKey: "DisableCommandQuit")) {
+            let alert = NSAlert()
+            alert.messageText = "QuickDown"
+            alert.informativeText = "Accidental quitting by Command-Quit disabled. Toggle in settings"
+            alert.runModal()
+            return .terminateCancel
+        }
+        
+        return .terminateNow
     }
     
     func applicationWillTerminate(_ notification: Notification) {
