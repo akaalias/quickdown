@@ -6,6 +6,8 @@
 	<string></string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSSupportsSuddenTermination</key>
+	<false/>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

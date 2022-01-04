@@ -41,11 +41,10 @@ struct InfoModalView: View {
             }
             
             Divider()
-            
+        
             Button("Dismiss") {
                 self.showModal.toggle()
             }
-
         }
         .frame(width: 300, height: 250)
         .onExitCommand(perform: {

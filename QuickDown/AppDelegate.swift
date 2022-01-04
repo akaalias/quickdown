@@ -20,5 +20,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.statusBar?.showPopover(hotKey)
         }
     }
+    
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        print("applicationShouldTerminate")
+        return .terminateCancel
+    }
+    
+    func applicationWillTerminate(_ notification: Notification) {
+        print("applicationWillTerminate")
+    }
 }
 
