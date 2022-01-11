@@ -15,7 +15,7 @@ struct InfoModalView: View {
                 Text("QuickDown Settings")
                     .font(.title2)
                 
-                Text("Version 1.4")
+                Text("Version 1.6")
                 Text("Contact: alexis.rondeau@gmail.com")
             }
             
