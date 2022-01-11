@@ -6,7 +6,6 @@ struct ContentView: View {
         case field
     }
     
-    @State var popover: NSPopover
     @State private var noteText: String = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
     @State var showingExporter = false
     @State var errorMessage = ""
@@ -21,9 +20,6 @@ struct ContentView: View {
                 .foregroundColor(.primary)
                 .font(.system(.title, design: .monospaced))
                 .task { self.focusedField = .field }
-                .onExitCommand(perform: {
-                    popover.performClose(self)
-                })
             
             Button {
                 self.showModal.toggle()
@@ -73,7 +69,6 @@ struct ContentView: View {
             case .success(let url):
                 print("Success: \(url) markdown files exported\n")
                 noteText = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
-                popover.performClose(self)
                 
             case .failure(let error):
                 print("Error: \(error.localizedDescription)\n")
