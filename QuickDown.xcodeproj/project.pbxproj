@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		56D420182760BB1E00ED9609 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D420172760BB1E00ED9609 /* Preview Assets.xcassets */; };
 		56D420202760BBB600ED9609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4201F2760BBB600ED9609 /* AppDelegate.swift */; };
+		56D420232760BC4000ED9609 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D420222760BC4000ED9609 /* MenuBarViewController.swift */; };
 		56D420262760BC4800ED9609 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D420252760BC4800ED9609 /* ContentView.swift */; };
+		56D4202C2760BC5700ED9609 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D420282760BC5700ED9609 /* StatusBarController.swift */; };
 		56D4202D2760BC5700ED9609 /* MarkdownExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D420292760BC5700ED9609 /* MarkdownExportManager.swift */; };
+		56D4202E2760BC5700ED9609 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4202A2760BC5700ED9609 /* EventMonitor.swift */; };
 		56D4202F2760BC5700ED9609 /* MarkdownFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4202B2760BC5700ED9609 /* MarkdownFile.swift */; };
 		56D420322760BC8C00ED9609 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 56D420312760BC8C00ED9609 /* HotKey */; };
 		56D420362760BCD600ED9609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D420352760BCD600ED9609 /* Assets.xcassets */; };
@@ -25,8 +28,11 @@
 		56D420192760BB1E00ED9609 /* QuickDown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickDown.entitlements; sourceTree = "<group>"; };
 		56D4201F2760BBB600ED9609 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D420212760BBDC00ED9609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		56D420222760BC4000ED9609 /* MenuBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
 		56D420252760BC4800ED9609 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56D420282760BC5700ED9609 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		56D420292760BC5700ED9609 /* MarkdownExportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownExportManager.swift; sourceTree = "<group>"; };
+		56D4202A2760BC5700ED9609 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		56D4202B2760BC5700ED9609 /* MarkdownFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownFile.swift; sourceTree = "<group>"; };
 		56D420352760BCD600ED9609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56D420372760BCDF00ED9609 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 				56D420392760C21700ED9609 /* Markdown */,
 				56D420212760BBDC00ED9609 /* Info.plist */,
 				56D4201F2760BBB600ED9609 /* AppDelegate.swift */,
+				56D420272760BC5700ED9609 /* Helpers */,
 				56D420242760BC4800ED9609 /* Views */,
 				56D420372760BCDF00ED9609 /* Main.storyboard */,
 				56D420352760BCD600ED9609 /* Assets.xcassets */,
@@ -92,6 +99,16 @@
 				56FBD9362760F842003DC5A7 /* InfoModalView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		56D420272760BC5700ED9609 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				56D420222760BC4000ED9609 /* MenuBarViewController.swift */,
+				56D420282760BC5700ED9609 /* StatusBarController.swift */,
+				56D4202A2760BC5700ED9609 /* EventMonitor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		56D420392760C21700ED9609 /* Markdown */ = {
@@ -205,10 +222,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D420202760BBB600ED9609 /* AppDelegate.swift in Sources */,
+				56D4202C2760BC5700ED9609 /* StatusBarController.swift in Sources */,
 				56D420262760BC4800ED9609 /* ContentView.swift in Sources */,
 				56FBD9372760F842003DC5A7 /* InfoModalView.swift in Sources */,
 				56D4202F2760BC5700ED9609 /* MarkdownFile.swift in Sources */,
 				56D4202D2760BC5700ED9609 /* MarkdownExportManager.swift in Sources */,
+				56D420232760BC4000ED9609 /* MenuBarViewController.swift in Sources */,
+				56D4202E2760BC5700ED9609 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.QuickDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -382,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.QuickDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

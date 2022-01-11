@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = icon
         statusItem.button?.image?.size = NSSize(width: 18.0, height: 18.0)
         statusItem.button?.image?.isTemplate = true
-
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showNotepad)
 

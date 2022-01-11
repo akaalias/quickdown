@@ -11,7 +11,6 @@ struct ContentView: View {
     @State var errorMessage = ""
     @FocusState private var focusedField: FocusField?
     @State private var showModal = false
-
     @State var showingImporter = false
 
     var body: some View {
@@ -78,8 +77,8 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
