@@ -52,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56378EC1278F28710004FC6D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56FBD9362760F842003DC5A7 /* InfoModalView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		56D420042760BB1C00ED9609 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +103,8 @@
 		56D420242760BC4800ED9609 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56378EC1278F28710004FC6D /* Settings */,
 				56D420252760BC4800ED9609 /* ContentView.swift */,
-				56FBD9362760F842003DC5A7 /* InfoModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,7 +380,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.QuickDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -402,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.QuickDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

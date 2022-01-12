@@ -26,13 +26,10 @@ struct ContentView: View {
                 .foregroundColor(.primary)
                 .font(.system(.title, design: .monospaced))
                 .task {
-                    print("Rendering TextEditor...")
-                    
                     customCursorIndexConfigured = template.hasCustomCursorIndex()
                     cursorIndex = template.getCursorIndex()
                     noteText = template.appliedTemplate()
-                
-                    self.focusedField = .field
+                    focusedField = .field
                 }
                 .introspectTextView { textView in
                     if(customCursorIndexConfigured && !customCursorIndexWasSet) {
@@ -42,12 +39,12 @@ struct ContentView: View {
                 }
             
             Button {
-                self.showModal.toggle()
+                showModal.toggle()
             } label: {
                 Image(systemName: "gear")
             }
             .sheet(isPresented: $showModal) {
-                InfoModalView(showModal: self.$showModal)
+                InfoModalView(showModal: $showModal)
             }
             .offset(x: 210, y: 110)
             .buttonStyle(.borderless)
