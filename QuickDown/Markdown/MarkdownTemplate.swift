@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
-import Foundation
+import AppKit
 
 class MarkdownTemplate {
     var templateText: String
     var cursorIndex = 0
+    var pasteboardContent = ""
     
     init(templateText: String) {
         self.templateText = templateText
@@ -25,6 +25,15 @@ class MarkdownTemplate {
         return self.cursorIndex
     }
     
+    func getPasteboardContent() -> String {
+        let pasteboard = NSPasteboard.general
+        let copiedString = pasteboard.string(forType: .string)
+
+        pasteboardContent = copiedString ?? ""
+
+        return pasteboardContent
+    }
+    
     func hasCustomCursorIndex() -> Bool {
         if(self.getCursorIndex() != 0) {
             return true
@@ -32,8 +41,22 @@ class MarkdownTemplate {
         
         return false
     }
+
+    func hasPasteboardDirective() -> Bool {
+        if(self.getPasteboardContent() != "") {
+            return true
+        }
+        
+        return false
+    }
+
     
     func appliedTemplate() -> String {
-        return self.templateText.replacingOccurrences(of: "%CURSOR%", with: "")
+        return self.templateText
+            .replacingOccurrences(of: "%CURSOR%", with: "")
+            .replacingOccurrences(of: "%CLIPBOARD%", with: self.getPasteboardContent())
+            .replacingOccurrences(of: "%DATETIME%", with: Date().formatted())
+            .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: ",").first! )
+            .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
     }
 }
