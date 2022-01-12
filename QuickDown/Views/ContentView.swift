@@ -1,24 +1,45 @@
 import SwiftUI
 import AppKit
+import Introspect
 
 struct ContentView: View {
     enum FocusField: Hashable {
         case field
     }
-    
+    let template = MarkdownTemplate(templateText: UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? "")
+
     @State private var noteText: String = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
     @State var showingExporter = false
     @State var errorMessage = ""
-    @FocusState private var focusedField: FocusField?
     @State private var showModal = false
     @State var showingImporter = false
+    
+    @FocusState private var focusedField: FocusField?
+
+    @State var cursorIndex = 0
+    @State var customCursorIndexConfigured = false
+    @State var customCursorIndexWasSet = false
 
     var body: some View {
         ZStack {
             TextEditor(text: $noteText)
                 .foregroundColor(.primary)
                 .font(.system(.title, design: .monospaced))
-                .task { self.focusedField = .field }
+                .task {
+                    print("Rendering TextEditor...")
+                    
+                    customCursorIndexConfigured = template.hasCustomCursorIndex()
+                    cursorIndex = template.getCursorIndex()
+                    noteText = template.appliedTemplate()
+                
+                    self.focusedField = .field
+                }
+                .introspectTextView { textView in
+                    if(customCursorIndexConfigured && !customCursorIndexWasSet) {
+                        textView.setSelectedRange(NSMakeRange(cursorIndex, 0))
+                        customCursorIndexWasSet = true
+                    }
+                }
             
             Button {
                 self.showModal.toggle()
@@ -30,7 +51,7 @@ struct ContentView: View {
             }
             .offset(x: 210, y: 110)
             .buttonStyle(.borderless)
-
+            
             Button("Save") {
                 showingExporter = true
             }
@@ -59,21 +80,23 @@ struct ContentView: View {
             }
 
         })
-        .padding(20)
         .fileExporter(isPresented: $showingExporter,
                       document: MarkdownExportManager().createFileFromString(text: noteText),
                       contentType: .markdownText,
                       defaultFilename: MarkdownExportManager().createFileNameFromString(text: noteText)) { result in
             switch result {
-            case .success(let url):
-                print("Success: \(url) markdown files exported\n")
-                noteText = UserDefaults.standard.string(forKey: "MarkdownTemplate") ?? ""
-                
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)\n")
-                errorMessage = error.localizedDescription
+                case .success(let url):
+                    customCursorIndexConfigured = template.hasCustomCursorIndex()
+                    cursorIndex = template.getCursorIndex()
+                    customCursorIndexWasSet = false
+                    noteText = template.appliedTemplate()
+                    focusedField = .field
+
+                case .failure(let error):
+                    errorMessage = error.localizedDescription
             }
         }
+        .padding(20)
     }
 }
 

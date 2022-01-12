@@ -59,8 +59,8 @@ struct InfoModalView: View {
                     .font(.title2)
 
                 TextEditor(text: $markdownTemplate)
-                    .foregroundColor(.primary)
-                    .frame(width: 250, height: 50)
+                    .foregroundColor(Color.white)
+                    .frame(width: 250, height: 100)
                 
                 HStack {
                     Button(action: {
