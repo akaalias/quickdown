@@ -13,20 +13,6 @@ struct InfoModalView: View {
         ZStack {
             TabView {
                 List {
-                    TextEditor(text: $markdownTemplate)
-                        .foregroundColor(Color.white)
-                        .frame(width: .infinity, height: 100)
-                        .onChange(of: markdownTemplate) { newValue in
-                            self.saveMarkdownTemplate()
-                        }
-                    Text(markdownTemplateSaveMessage)
-                    Text("Tip: You can use %CURSOR% for custom placement")
-                        .font(.footnote)
-
-                }.tabItem { Text("Template") }
-
-                List {
-                    
                     HStack {
                         Text("Global Hotkey")
                         Text("⌘-⌥-N")
@@ -52,6 +38,18 @@ struct InfoModalView: View {
                     }
                     
                 }.tabItem { Text("Hotkeys") }
+                List {
+                    TextEditor(text: $markdownTemplate)
+                        .foregroundColor(Color.white)
+                        .frame(width: .infinity, height: 100)
+                        .onChange(of: markdownTemplate) { newValue in
+                            self.saveMarkdownTemplate()
+                        }
+                    Text(markdownTemplateSaveMessage)
+                    Text("Tip: You can use %CURSOR% for custom placement")
+                        .font(.footnote)
+
+                }.tabItem { Text("Template") }
                 
                 List {
                     Text("If you like having QuickDown around, toggle the following switch to launch after logging in:")
@@ -78,7 +76,7 @@ struct InfoModalView: View {
                 }.tabItem { Text("Quitting") }
 
                 List {
-                    Text("Version 1.8")
+                    Text("Version 1.9")
                     Text("Contact: alexis.rondeau@gmail.com")
                     Text("Web: https://github.com/akaalias/quickdown")
                 }.tabItem { Text("About") }
