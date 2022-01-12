@@ -7,12 +7,23 @@
 - Save Markdown Note (Local and iCloud): **⌘-S**
 - Open Markdown Note (Local and iCloud): **⌘-O**
 
-### Markdown Template WITH Custom Cursor Placement
-- **Super useful** when you want to have a solid boilerplate for all your notes but STILL want to start writing right away
-- You can now create complex Markdown templates and still place your cursor exactly where you want to start writing
-- Simply use `%CURSOR%` to tell QuickDown where to place your cursor on focus:
+### Markdown Template with Directives
 
-<img width="572" alt="Screenshot 2022-01-12 at 16 03 33" src="https://user-images.githubusercontent.com/111555/149177212-a7d6390c-f10b-40ff-88c5-4b15070a1561.png">
+- Create better notes faster with a custom markdown template without having leave your keyboard with directives for:
+- Directives are **super useful** when you want to have a solid boilerplate for all your notes but STILL want to start writing right away
+- You can now create complex Markdown templates and still place your cursor exactly where you want to start writing
+
+1. Your cursor position on focus (%CURSOR%)
+2. Today's date and time (%DATETIME%)
+3. Just today's date (%DATE%)
+4. Just the time (%TIME%)
+5. Your clipboard content (%CLIPBOARD%)
+
+## Insert directives in your template
+<img width="572" alt="Screenshot 2022-01-12 at 17 48 25" src="https://user-images.githubusercontent.com/111555/149195363-f21dad34-7537-4673-84b8-82aab3055207.png">
+
+## Live replacement on new note
+<img width="572" alt="Screenshot 2022-01-12 at 17 45 44 copy" src="https://user-images.githubusercontent.com/111555/149195380-5d5d2604-7bd7-438e-a3e5-0550b3e457b0.png">
 
 ### Launch on Login
 - Useful if you like having QuickDown around after logins
