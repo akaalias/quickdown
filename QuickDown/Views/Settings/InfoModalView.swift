@@ -41,12 +41,14 @@ struct InfoModalView: View {
                 List {
                     TextEditor(text: $markdownTemplate)
                         .foregroundColor(Color.white)
-                        .frame(width: .infinity, height: 100)
+                        .frame(width: .infinity, height: 120)
                         .onChange(of: markdownTemplate) { newValue in
                             self.saveMarkdownTemplate()
                         }
+                    Text("Useful directives: %CURSOR% %DATETIME% %DATE% %TIME% %CLIPBOARD%")
+                        .font(.footnote)
+
                     Text(markdownTemplateSaveMessage)
-                    Text("Tip: You can use %CURSOR% for custom placement")
                         .font(.footnote)
 
                 }.tabItem { Text("Template") }
