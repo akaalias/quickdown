@@ -2,23 +2,27 @@
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
-### Features
-- Global Hotkey: ⌘-⌥-N
-- Save Markdown Note: ⌘-S
+### Hotkeys
+- Global Hotkey: **⌘-⌥-N**
+- Save Markdown Note (Local and iCloud): **⌘-S**
+- Open Markdown Note (Local and iCloud): **⌘-O**
 
-### Utilities
-- Dismiss Popover: Esc
-- Open Markdown Note: ⌘-O
+### Markdown Template WITH Custom Cursor Placement
+- **Super useful** when you want to have a solid boilerplate for all your notes but STILL want to start writing right away
+- You can now create complex Markdown templates and still place your cursor exactly where you want to start writing
+- Simply use `%CURSOR%` to tell QuickDown where to place your cursor on focus:
 
-## Install QuickDown (MacOS/Arm64)
+<img width="572" alt="Screenshot 2022-01-12 at 16 03 33" src="https://user-images.githubusercontent.com/111555/149177212-a7d6390c-f10b-40ff-88c5-4b15070a1561.png">
+
+### Launch on Login
+- Useful if you like having QuickDown around after logins
+
+## Install QuickDown (MacOS)
 - Download latest release (QuickDown.zip) from [releases](https://github.com/akaalias/quickdown/releases)
 - Unzip and drag QuickDown.app to your /Applications folder
 - Open QuickDown.app 
 
-### Optional: Launch on Login
-If you like having QuickDown around after logins, click on the gear bottom-right and check "Launch on Login"
-
-### Background
+### Project Background
 
 As an [avid Obsidian user](https://publish.obsidian.md/alexisrondeau) and [constant pen-paper note-taker](https://publish.obsidian.md/alexisrondeau/%E2%AD%90%EF%B8%8F+My+Physical+Notebooks+(Photos)), I often want to take a quick markdown note while working 
 - _without_ having to keep Obsidian running in the background
