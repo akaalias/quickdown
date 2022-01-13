@@ -39,7 +39,8 @@ struct InfoModalView: View {
                 }.tabItem { Text("Hotkeys") }
                 List {
                     TextEditor(text: $markdownTemplate)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(.primary)
+                        .font(.system(.body, design: .monospaced))
                         .frame(width: .infinity, height: 100)
                         .onChange(of: markdownTemplate) { newValue in
                             self.saveMarkdownTemplate()
