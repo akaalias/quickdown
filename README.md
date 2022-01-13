@@ -8,11 +8,12 @@
 - Open Markdown Note (Local and iCloud): **⌘-O**
 
 ### Markdown Template with Directives
+Create better notes faster with a custom markdown template without having leave your keyboard.
 
-- Create better notes faster with a custom markdown template without having leave your keyboard with directives for:
 - Directives are **super useful** when you want to have a solid boilerplate for all your notes but STILL want to start writing right away
-- You can now create complex Markdown templates and still place your cursor exactly where you want to start writing
+- You can now create **complex Markdown templates** AND **place your cursor** exactly where you want to start writing
 
+#### Available Directives
 1. Your cursor position on focus (%CURSOR%)
 2. Today's date and time (%DATETIME%)
 3. Just today's date (%DATE%)
