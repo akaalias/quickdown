@@ -23,7 +23,7 @@
 <img width="572" alt="Screenshot 2022-01-12 at 17 48 25" src="https://user-images.githubusercontent.com/111555/149195363-f21dad34-7537-4673-84b8-82aab3055207.png">
 
 ## Live replacement on new note
-<img width="572" alt="Screenshot 2022-01-12 at 17 45 44 copy" src="https://user-images.githubusercontent.com/111555/149195380-5d5d2604-7bd7-438e-a3e5-0550b3e457b0.png">
+<img width="572" alt="Screenshot 2022-01-12 at 17 45 44 copy" src="https://user-images.githubusercontent.com/111555/149323391-1f7504b0-34a1-4436-8eb0-6d731d8f2677.png">
 
 ### Launch on Login
 - Useful if you like having QuickDown around after logins
