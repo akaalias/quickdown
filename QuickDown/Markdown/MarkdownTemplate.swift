@@ -18,8 +18,8 @@ class MarkdownTemplate {
     }
     
     func getCursorIndex() -> Int {
-        if let range: Range<String.Index> = self.templateText.range(of: "%CURSOR%") {
-            let index: Int = self.templateText.distance(from: self.templateText.startIndex, to: range.lowerBound)
+        if let range: Range<String.Index> = self.appliedTemplate().range(of: "%CURSOR%") {
+            let index: Int = self.appliedTemplate().distance(from: self.appliedTemplate().startIndex, to: range.lowerBound)
             self.cursorIndex = index
         }
         return self.cursorIndex
@@ -49,14 +49,16 @@ class MarkdownTemplate {
         
         return false
     }
-
     
     func appliedTemplate() -> String {
         return self.templateText
-            .replacingOccurrences(of: "%CURSOR%", with: "")
             .replacingOccurrences(of: "%CLIPBOARD%", with: self.getPasteboardContent())
             .replacingOccurrences(of: "%DATETIME%", with: Date().formatted())
             .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: ",").first! )
             .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
+    }
+    
+    func finalAppliedTemplate() -> String {
+        return appliedTemplate().replacingOccurrences(of: "%CURSOR%", with: "")
     }
 }

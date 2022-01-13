@@ -28,7 +28,7 @@ struct ContentView: View {
                 .task {
                     customCursorIndexConfigured = template.hasCustomCursorIndex()
                     cursorIndex = template.getCursorIndex()
-                    noteText = template.appliedTemplate()
+                    noteText = template.finalAppliedTemplate()
                     focusedField = .field
                 }
                 .introspectTextView { textView in
@@ -86,7 +86,7 @@ struct ContentView: View {
                     customCursorIndexConfigured = template.hasCustomCursorIndex()
                     cursorIndex = template.getCursorIndex()
                     customCursorIndexWasSet = false
-                    noteText = template.appliedTemplate()
+                    noteText = template.finalAppliedTemplate()
                     focusedField = .field
 
                 case .failure(let error):
