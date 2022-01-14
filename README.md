@@ -2,6 +2,11 @@
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
+## Install QuickDown (MacOS)
+- <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.zip">⬇️ Get QuickDown 2.1 for macOS (1.3MB)</a>
+- Unzip and drag QuickDown.app to your /Applications folder
+- Open QuickDown.app 
+
 ### Hotkeys
 - Global Hotkey: **⌘-⌥-N**
 - Save Markdown Note (Local and iCloud): **⌘-S**
@@ -30,7 +35,7 @@ Create better notes faster with a custom markdown template without having leave 
 - Useful if you like having QuickDown around after logins
 
 ## Install QuickDown (MacOS)
-- Download latest release (QuickDown.zip) from [releases](https://github.com/akaalias/quickdown/releases)
+- <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.zip">⬇️ Get QuickDown 2.1 for macOS (1.3MB)</a>
 - Unzip and drag QuickDown.app to your /Applications folder
 - Open QuickDown.app 
 
