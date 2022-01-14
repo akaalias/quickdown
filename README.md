@@ -2,10 +2,10 @@
 
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
  
-## Install QuickDown (MacOS)
-- <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.zip">⬇️ Get QuickDown 2.1 for macOS (1.3MB)</a>
-- Unzip and drag QuickDown.app to your /Applications folder
-- Open QuickDown.app 
+## Install (MacOS)
+1. <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.dmg">Get QuickDown 2.2 for macOS</a>
+2. Double-click the .dmg and drag the app into your /Applications folder
+3. Launch QuickDown
 
 ### Hotkeys
 - Global Hotkey: **⌘-⌥-N**
@@ -34,10 +34,10 @@ Create better notes faster with a custom markdown template without having leave 
 ### Launch on Login
 - Useful if you like having QuickDown around after logins
 
-## Install QuickDown (MacOS)
-- <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.zip">⬇️ Get QuickDown 2.1 for macOS (1.3MB)</a>
-- Unzip and drag QuickDown.app to your /Applications folder
-- Open QuickDown.app 
+## Install (MacOS)
+1. <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.dmg">Get QuickDown 2.2 for macOS</a>
+2. Double-click the .dmg and drag the app into your /Applications folder
+3. Launch QuickDown
 
 ### Project Background
 
@@ -57,5 +57,10 @@ None of the existing [note-taking menu bar apps](https://www.macmenubar.com/note
 Just a way to jot down a markdown note.
 
 Nothing more, nothing less. 
+
+## Install (MacOS)
+1. <a href="https://github.com/akaalias/quickdown/releases/latest/download/QuickDown.dmg">Get QuickDown 2.2 for macOS</a>
+2. Double-click the .dmg and drag the app into your /Applications folder
+3. Launch QuickDown
 
 [![Total Downloads](https://img.shields.io/github/downloads/akaalias/quickdown/total.svg?logoColor=brightgreen)]()
