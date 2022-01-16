@@ -1,4 +1,4 @@
-## QuickDown: Keyboard-first, local markdown note-taking for MacOS
+## Keyboard-First, Local Markdown Note-Taking.
 
 ### QuickDown is a blazing-fast, no-frills, tiny and customizable notepad that sits on top of local plain text Markdown files
 
