@@ -45,7 +45,7 @@ struct InfoModalView: View {
                         .onChange(of: markdownTemplate) { newValue in
                             self.saveMarkdownTemplate()
                         }
-                    Text("Available Directives: %CURSOR% %DATETIME% %DATE% %TIME% %CLIPBOARD% %ID% %UUID%")
+                    Text("Available Directives: %CURSOR% %DATETIME% %DATE% %TIME% %CLIPBOARD% %ID% %UUID% %ZKID%")
                         .font(.footnote)
 
                     HStack {

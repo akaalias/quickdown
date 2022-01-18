@@ -51,6 +51,10 @@ class MarkdownTemplate {
     }
     
     func appliedTemplate() -> String {
+
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMddHHmm"
+
         return self.templateText
             .replacingOccurrences(of: "%CLIPBOARD%", with: getPasteboardContent())
             .replacingOccurrences(of: "%DATETIME%", with: Date().formatted())
@@ -58,6 +62,7 @@ class MarkdownTemplate {
             .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
             .replacingOccurrences(of: "%ID%", with: String(getNextID()))
             .replacingOccurrences(of: "%UUID%", with: UUID().uuidString)
+            .replacingOccurrences(of: "%ZKID%", with: df.string(from: Date()))
     }
     
     func finalAppliedTemplate() -> String {
