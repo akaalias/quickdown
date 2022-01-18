@@ -57,6 +57,7 @@ class MarkdownTemplate {
             .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: ",").first! )
             .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
             .replacingOccurrences(of: "%ID%", with: String(getNextID()))
+            .replacingOccurrences(of: "%UUID%", with: UUID().uuidString)
     }
     
     func finalAppliedTemplate() -> String {
