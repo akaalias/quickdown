@@ -83,6 +83,7 @@ struct ContentView: View {
                       defaultFilename: MarkdownExportManager().createFileNameFromString(text: noteText)) { result in
             switch result {
                 case .success(let url):
+                    template.saveNextID()
                     customCursorIndexConfigured = template.hasCustomCursorIndex()
                     cursorIndex = template.getCursorIndex()
                     customCursorIndexWasSet = false

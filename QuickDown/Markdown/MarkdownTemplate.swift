@@ -12,7 +12,7 @@ class MarkdownTemplate {
     var templateText: String
     var cursorIndex = 0
     var pasteboardContent = ""
-    
+
     init(templateText: String) {
         self.templateText = templateText
     }
@@ -52,13 +52,28 @@ class MarkdownTemplate {
     
     func appliedTemplate() -> String {
         return self.templateText
-            .replacingOccurrences(of: "%CLIPBOARD%", with: self.getPasteboardContent())
+            .replacingOccurrences(of: "%CLIPBOARD%", with: getPasteboardContent())
             .replacingOccurrences(of: "%DATETIME%", with: Date().formatted())
             .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: ",").first! )
             .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
+            .replacingOccurrences(of: "%ID%", with: String(getNextID()))
     }
     
     func finalAppliedTemplate() -> String {
-        return appliedTemplate().replacingOccurrences(of: "%CURSOR%", with: "")
+        return appliedTemplate()
+            .replacingOccurrences(of: "%CURSOR%", with: "")
+    }
+    
+    func getNextID() -> Int {
+        let currentID = UserDefaults.standard.integer(forKey: "IDCounter")
+        return currentID
+    }
+    
+    func saveNextID() -> Int {
+        let currentID = UserDefaults.standard.integer(forKey: "IDCounter")
+        UserDefaults.standard.set(currentID + 1, forKey: "IDCounter")
+        let newID = UserDefaults.standard.integer(forKey: "IDCounter")
+        print("Updated ID from " + String(currentID) + " to " + String(newID))
+        return newID
     }
 }

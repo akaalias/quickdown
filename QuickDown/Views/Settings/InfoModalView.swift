@@ -47,7 +47,7 @@ struct InfoModalView: View {
                         }
                     Text("Available Directives:")
                         .font(.footnote)
-                    Text("%CURSOR% %DATETIME% %DATE% %TIME% %CLIPBOARD%")
+                    Text("%CURSOR% %DATETIME% %DATE% %TIME% %CLIPBOARD% %ID%")
                         .font(.footnote)
                         .bold()
 
@@ -89,7 +89,7 @@ struct InfoModalView: View {
                 }.tabItem { Text("Quitting") }
                 
                 List {
-                    Text("Version 2.1")
+                    Text("Version 2.3")
                     Text("Contact: alexis.rondeau@gmail.com")
                     Text("Web: https://github.com/akaalias/quickdown")
                 }.tabItem { Text("About") }
