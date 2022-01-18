@@ -79,7 +79,6 @@ class MarkdownTemplate {
         let currentID = UserDefaults.standard.integer(forKey: "IDCounter")
         UserDefaults.standard.set(currentID + 1, forKey: "IDCounter")
         let newID = UserDefaults.standard.integer(forKey: "IDCounter")
-        print("Updated ID from " + String(currentID) + " to " + String(newID))
         return newID
     }
 }
