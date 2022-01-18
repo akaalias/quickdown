@@ -7,4 +7,4 @@
 ![Demo](https://github.com/akaalias/quickdown/blob/main/demo.gif?raw=true)
 
 ## QuickDown is free and open-source! 
-<a href="https://akaalias.github.io/getquickdown/"><img src="https://github.com/akaalias/quickdown/blob/main/Button.png" width="300"/></a>
+<a href="https://akaalias.github.io/getquickdown/"><img src="https://github.com/akaalias/quickdown/blob/main/Button.png" width="400"/></a>
