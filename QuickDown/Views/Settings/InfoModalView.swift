@@ -86,9 +86,10 @@ struct InfoModalView: View {
                 }.tabItem { Text("Quitting") }
                 
                 List {
-                    Text("Version 2.3")
+                    Text("Version: 2.4")
                     Text("Contact: alexis.rondeau@gmail.com")
-                    Text("Web: https://github.com/akaalias/quickdown")
+                    Text("Web: https://akaalias.github.io/getquickdown")
+                    Text("Code: https://github.com/akaalias/quickdown")
                 }.tabItem { Text("About") }
             }
             
